@@ -28,6 +28,7 @@ class TestingConfig(BaseConfig):
     # SQLALCHEMY_DATABASE_URI = 'sqlite:///' + db_path
     # SQLALCHEMY_DATABASE_URI = create_sqlite_uri("test.db")
     # SQLALCHEMY_DATABASE_URI = 'sqlite:///test.db'
+    SQLALCHEMY_DATABASE_URI = "mysql+pymysql://root:1234@localhost:3306/data"
  
 
 config = {

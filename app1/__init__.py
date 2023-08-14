@@ -11,10 +11,10 @@ def create_app(config_name, **kwargs):
  
     app = Flask(__name__)
     app.config.from_object(config[config_name])
-    path = kwargs.get("path")
+    # path = kwargs.get("path")
 
-    if path:
-        app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + path
+    # if path:
+    #     app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + path
 
     db.init_app(app)
     migrate.init_app(app, db)
