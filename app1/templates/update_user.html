@@ -1,0 +1,84 @@
+{% extends '/frame/base.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+
+    <div class="container mt-5">
+        <div class="row align-items-center">
+            <div class="col text-center">
+                <h1>Update User</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row align-items-center">
+            <div class="col text-center">
+                <label for="useremail2" class="col-sm-2 col-form-label">Email</label>
+                <!-- <label for="useremail2">Email: </label> -->
+            </div>
+            <div class="col text-center">
+                <input type="email" class="form-control" id="email2" name="useremail2"/>
+                <!-- <input type="text" id="email2" name="useremail2"/> -->
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row align-items-center">
+            <div class="col text-center">
+                <label for="password2" class="col-sm-2 col-form-label">Password</label>
+                <!-- <label for="password2">Password: </label> -->
+            </div>
+            <div class="col text-center">
+                <input type="password" class="form-control" id="password2" placeholder="" name="password2">
+                <!-- <input type="password" id="password2" name="password2"/> -->
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row align-items-center">
+            <div class="col text-center">
+                <label for="priority2" class="col-sm-2 col-form-label">Priority</label>
+                <!-- <label for="priority2">Priority: </label> -->
+            </div>
+            <div class="col text-center">
+                <input type="text" class="form-control" id="priority2" placeholder="" name="priority2">
+                <!-- <input type="text" id="priority2" name="priority2"/> -->
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row align-items-center">
+            <div class="col text-center">
+                <button class="click2 btn btn-primary">Update</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row align-items-center"></div>
+    </div>
+
+    <!-- <div class="container mt-5">
+        <div class="row align-items-center">
+            <div class="col text-center">
+                <h3>Update Result</h3>
+            </div>
+        </div>
+    </div> -->
+
+    <div class="container mt-5">
+        <div class="row align-items-center">
+            <div class="col text-center">
+                <div id="updateContainer"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../static/js/update_user.js"></script>
+
+{% endblock %}

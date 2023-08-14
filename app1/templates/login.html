@@ -1,20 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-</head>
-<body>
-    <h1>User Login</h1>
+{% extends '/frame/base.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+    <div class="container mt-5">
+        <div class="row align-items-center">
+            <div class="col text-center">
+                <h1>Login</h1>
+            </div>
+        </div>
+    </div>
+
     <form action="/login" method="post">
-        <label for="user_email">Email: </label>
-        <input type="text" id="user_email" name="user_email" required/>
-        <label for="password">Password: </label>
-        <input type="password" id="password" name="password" required/>
-        <p>
-            <input type="submit" value="login">
-        </p>
+        <div class="container mt-5">
+            <div class="row align-items-center">
+                <div class="col text-center">
+                    <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+                </div>
+                <div class="col text-center">
+                    <input type="email" class="form-control" id="user_email" placeholder="Input your email" name="user_email" required>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container mt-5">
+            <div class="row align-items-center">
+                <div class="col text-center">
+                    <label for="staticEmail" class="col-sm-2 col-form-label">Password</label>
+                </div>
+                <div class="col text-center">
+                    <input type="password" class="form-control" id="password" placeholder="Input your password" name="password" required>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-5">
+            <div class="row align-items-center">
+                <div class="col text-center">
+                    <button type="submit" class="btn btn-primary">login</button>
+                </div>
+            </div>
+        </div>
     </form>
-</body>
-</html>
+{% endblock %}

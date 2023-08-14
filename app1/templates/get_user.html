@@ -1,0 +1,87 @@
+{% extends '/frame/base.html' %}
+
+{% block title %}Search User{% endblock %}
+
+{% block content %}
+
+    <div class="container mt-5">
+        <div class="row align-items-center">
+            <div class="col text-center">
+                <h1>Search User</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row align-items-center">
+            <div class="col text-center">
+                <label for="useremail" class="col-sm-2 col-form-label">Email</label>
+                <!-- <td><label for="useremail">Email: </label></td> -->
+            </div>
+            <div class="col text-center">
+                <input type="email" class="form-control" id="email" placeholder="" name="useremail">
+                <!-- <td><input type="text" id="email" name="useremail"/></td> -->
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row align-items-center">
+            <div class="col text-center">
+                <label for="priority" class="col-sm-2 col-form-label">Priority</label>
+                <!-- <td><label for="priority">Priority: </label></td> -->
+            </div>
+            <div class="col text-center">
+                <input type="text" class="form-control" id="priority" placeholder="" name="priority">
+                <!-- <td><input type="text" id="priority" name="priority"/></td> -->
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row align-items-center">
+            <div class="col text-center">
+                <button class="click btn btn-primary">Search</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row align-items-center"></div>
+    </div>
+
+    <!-- <div class="container mt-5">
+        <div class="row align-items-center">
+            <div class="col text-center">
+                <h3>Search Result</h3>
+            </div>
+        </div>
+    </div> -->
+
+    <div class="container mt-5">
+        <div class="row align-items-center">
+            <div class="col text-center">
+                <div id="searchContainer"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="container mt-5">
+        <div class="row align-items-center">
+            <div class="col text-center">Email</div>
+            <div class="col text-center">Password</div>
+            <div class="col text-center">Priority</div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row align-items-center">
+            <div class="col text-center">1</div>
+            <div class="col text-center">2</div>
+            <div class="col text-center">3</div>
+        </div>
+    </div> -->
+
+    <script src="../static/js/get_user.js"></script>
+
+{% endblock %}

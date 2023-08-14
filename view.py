@@ -22,6 +22,35 @@ def user_list():
     return render_template("user_list.html", users=user_list)
 
 
+@views_bp.route("/getuser")
+@login_required
+def get_user():
+    return render_template("get_user.html")
+
+
+@views_bp.route("/createuser")
+@login_required
+def create_user():
+    return render_template("create_user.html")
+
+
+@views_bp.route("/updateuser")
+@login_required
+def update_user():
+    return render_template("update_user.html")
+
+
+@views_bp.route("/deleteuser")
+@login_required
+def delete_user():
+    return render_template("delete_user.html")
+
+
+@views_bp.route("/register")
+def register():
+    return render_template("register.html")
+
+
 class User1(UserMixin):  
     pass  
 

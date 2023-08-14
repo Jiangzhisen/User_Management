@@ -1,30 +1,57 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Userlist</title>
-</head>
-<body>
-        <table border="2">
-            <tr>
-                <th>ID</th>
-                <th>Email</th>
-                <th>Password</th>
-                <th>Priority</th>
-            </tr>
-            {% for user in users %}
-            <tr>
-                <td>{{ user.user_id }}</td>
-                <td>{{ user.user_email }}</td>
-                <td>{{ user.user_password }}</td>
-                <td>{{ user.user_priority }}</td>
-            </tr>
-            {% endfor %}
-        </table>
+{% extends '/frame/base.html' %}
 
-        <p><a href="/">返回首頁</a></p>
+{% block title %}Login{% endblock %}
 
-        <p><a href="/logout">登出</a></p>
-</body>
-</html>
+{% block content %}
+
+    <div class="container mt-5">
+        <div class="row align-items-center">
+            <div class="col text-center">
+                <h1>User List</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row align-items-center">
+            <div class="col text-center">ID</div>
+            <div class="col text-center">Email</div>
+            <div class="col text-center">Password</div>
+            <div class="col text-center">Priority</div>
+        </div>
+    </div>
+
+    {% for user in users %}
+        <div class="container mt-5">
+            <div class="row align-items-center">
+                <div class="col text-center">{{ user.user_id }}</div>
+                <div class="col text-center">{{ user.user_email }}</div>
+                <div class="col text-center">{{ user.user_password }}</div>
+                <div class="col text-center">{{ user.user_priority }}</div>
+            </div>
+        </div>
+    {% endfor %}
+
+    <!-- <table border="2">
+        <tr>
+            <th>ID</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th>Priority</th>
+        </tr>
+        {% for user in users %}
+        <tr>
+            <td>{{ user.user_id }}</td>
+            <td>{{ user.user_email }}</td>
+            <td>{{ user.user_password }}</td>
+            <td>{{ user.user_priority }}</td>
+        </tr>
+        {% endfor %}
+    </table> -->
+
+    <!-- <p><a href="/">返回首頁</a></p>
+
+    <p><a href="/logout">登出</a></p> -->
+
+
+{% endblock %}

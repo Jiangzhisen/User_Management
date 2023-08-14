@@ -1,0 +1,58 @@
+{% extends '/frame/base.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+
+    <div class="container mt-5">
+        <div class="row align-items-center">
+            <div class="col text-center">
+                <h1>Delete User</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row align-items-center">
+            <div class="col text-center">
+                <label for="useremail3" class="col-sm-2 col-form-label">Email</label>
+                <!-- <label for="useremail3">Email: </label> -->
+            </div>
+            <div class="col text-center">
+                <input type="email" class="form-control" id="email3" name="useremail3"/>
+                <!-- <input type="text" id="email3" name="useremail3"/> -->
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row align-items-center">
+            <div class="col text-center">
+                <button class="click3 btn btn-primary">Delete</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row align-items-center"></div>
+    </div>
+
+    <!-- <div class="container mt-5">
+        <div class="row align-items-center">
+            <div class="col text-center">
+                <h3>Delete Result</h3>
+            </div>
+        </div>
+    </div> -->
+
+    <div class="container mt-5">
+        <div class="row align-items-center">
+            <div class="col text-center">
+                <div id="deleteContainer"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../static/js/delete_user.js"></script>
+
+{% endblock %}

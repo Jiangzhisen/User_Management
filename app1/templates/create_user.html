@@ -1,0 +1,84 @@
+{% extends '/frame/base.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+
+    <div class="container mt-5">
+        <div class="row align-items-center">
+            <div class="col text-center">
+                <h1>Create User</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row align-items-center">
+            <div class="col text-center">
+                <label for="useremail1" class="col-sm-2 col-form-label">Email</label>
+                <!-- <label for="useremail1">Email: </label> -->
+            </div>
+            <div class="col text-center">
+                <input type="email" class="form-control" id="email1" name="useremail1"/>
+                <!-- <input type="email" class="form-control" id="email" placeholder="" name="useremail"> -->
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row align-items-center">
+            <div class="col text-center">
+                <label for="password1" class="col-sm-2 col-form-label">Password</label>
+                <!-- <label for="password1">Password: </label> -->
+            </div>
+            <div class="col text-center">
+                <input type="password" class="form-control" id="password1" placeholder="" name="password1">
+                <!-- <input type="password" id="password1" name="password1"/> -->
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row align-items-center">
+            <div class="col text-center">
+                <label for="priority1" class="col-sm-2 col-form-label">Priority</label>
+                <!-- <label for="priority1">Priority: </label> -->
+            </div>
+            <div class="col text-center">
+                <input type="text" class="form-control" id="priority1" placeholder="" name="priority1">
+                <!-- <input type="text" id="priority1" name="priority1"/> -->
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row align-items-center">
+            <div class="col text-center">
+                <button class="click1 btn btn-primary">Create</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row align-items-center"></div>
+    </div>
+
+    <!-- <div class="container mt-5">
+        <div class="row align-items-center">
+            <div class="col text-center">
+                <h3>Create Result</h3>
+            </div>
+        </div>
+    </div> -->
+
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col text-center">
+                <div id="createContainer"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../static/js/create_user.js"></script>
+
+{% endblock %}
