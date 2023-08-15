@@ -51,7 +51,7 @@ $ python app.py
 
 ![image](app1/static/images/user_management7.png)
 
-1. Clicking on the "User List" link allows you to view a list of all users.
+4. Clicking on the "User List" link allows you to view a list of all users.
 
 ![image](app1/static/images/user_management8.png)
 
