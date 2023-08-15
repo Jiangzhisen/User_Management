@@ -57,19 +57,19 @@ $ python app.py
 
 ![image](app1/static/images/user_management6.png)
 
-5. In the "search_user" section, enter Email and Priority to search for users that match the criteria.
+5. In the "Search User" section, enter Email and Priority to search for users that match the criteria.
 
 ![image](app1/static/images/user_management2.png)
 
-6. In the "create_user" section, enter Email, Password, and Priority to create a new user.
+6. In the "Create User" section, enter Email, Password, and Priority to create a new user.
 
 ![image](app1/static/images/user_management3.png)
 
-7. In the "update_user" section, enter Email, Password, and Priority to update user information.
+7. In the "Update User" section, enter Email, Password, and Priority to update user information.
 
 ![image](app1/static/images/user_management4.png)
 
-8. In the "delete_user" section, enter Email to delete a specific user.
+8. In the "Delete User" section, enter Email to delete a specific user.
 
 ![image](app1/static/images/user_management5.png)
 
