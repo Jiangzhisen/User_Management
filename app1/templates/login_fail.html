@@ -1,0 +1,18 @@
+{% extends '/frame/base.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+
+{% if error_message %}
+    <div class="container mt-5">
+        <div class="row align-items-center">
+            <div class="col text-center">
+                <p>{{ error_message }}</p>
+                <a href="{{ url_for('views.login') }}" class="btn btn-primary">Try Again</a>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+{% endblock %}

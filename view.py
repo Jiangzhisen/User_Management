@@ -85,7 +85,7 @@ def login():
         login_user(user)
         return redirect(url_for('views.index1'))  
     
-    return 'Bad login'  
+    return render_template('login_fail.html', error_message='Bad login')
 
 
 @views_bp.route('/protected')  
