@@ -11,12 +11,6 @@ from pytest_mysql import factories
 #     return "sqlite:///" + os.path.join(basedir, db_name)
 
 
-
-# 創建一個 MySQL 測試數據庫
-mysql_my_proc = factories.mysql_proc(port=None)
-# mysql_my = factories.mysql('mysql_my_proc')
-
-
 class BaseConfig: 
     SECRET_KEY = 'THIS IS MAX'
     PERMANENT_SESSION_LIFETIME = datetime.timedelta(days=14)
@@ -36,7 +30,7 @@ class TestingConfig(BaseConfig):
     # SQLALCHEMY_DATABASE_URI = 'sqlite:///' + db_path
     # SQLALCHEMY_DATABASE_URI = create_sqlite_uri("test.db")
     # SQLALCHEMY_DATABASE_URI = 'sqlite:///test.db'
-    SQLALCHEMY_DATABASE_URI = mysql_my_proc
+    SQLALCHEMY_DATABASE_URI = "mysql+pymysql://root:1234@localhost:3306/test"
  
 
 config = {

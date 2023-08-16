@@ -7,7 +7,6 @@ from extension import db
 from flask_sqlalchemy import SQLAlchemy
 
 
-
 # @pytest.fixture()
 @pytest.fixture(scope="session")
 def app():
@@ -28,27 +27,14 @@ def runner(app):
     return app.test_cli_runner()
 
 
-@pytest.fixture(scope="function")
+@pytest.fixture(scope="session")
 def init_database(app):
 
     # 創建所有表
     with app.app_context():
         db.create_all()
+        
         yield db
 
         # 清理數據庫
         db.drop_all()
-
-
-
-
-# @pytest.fixture(scope="session")
-# def init_database(app):
-#     with app.app_context():
-#         db.create_all()
-    
-#     yield
-
-#     with app.app_context():
-#         db.session.remove()
-#         db.drop_all()
