@@ -10,8 +10,9 @@ from flask_sqlalchemy import SQLAlchemy
 # @pytest.fixture()
 @pytest.fixture(scope="session")
 def app():
+    db_fd, db_path = tempfile.mkstemp()
     config_name = "testing"
-    app = create_app(config_name)
+    app = create_app(config_name, path=db_path)
     return app
 
 

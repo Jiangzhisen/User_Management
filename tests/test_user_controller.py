@@ -2,7 +2,7 @@ from user_controller import *
 from conftest import *
 
 
-@pytest.mark.fun1
+@pytest.mark.fun
 class TestCreateUser():
     email = "12345@example.com"
     password = "12345"
