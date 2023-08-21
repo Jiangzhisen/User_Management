@@ -1,7 +1,6 @@
 from flask import Flask,Blueprint,render_template
 from extension import db
 from user_controller import *
-import json
 
 
 api = Blueprint('api', __name__)

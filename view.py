@@ -2,7 +2,6 @@ from flask import Flask,Blueprint,render_template, current_app
 from extension import db
 from user_controller import *
 from flask_login import LoginManager, UserMixin, login_user, logout_user, login_required, current_user
-import os
 from auth import login_manager
 
 

@@ -1,10 +1,7 @@
-import os
 import tempfile
 import pytest
-from pytest_mysql import factories
 from app1 import create_app
 from extension import db
-from flask_sqlalchemy import SQLAlchemy
 
 
 # @pytest.fixture()

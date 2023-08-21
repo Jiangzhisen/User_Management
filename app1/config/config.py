@@ -1,7 +1,4 @@
-import os
-import tempfile
 import datetime
-from pytest_mysql import factories
 
 
 # basedir = os.path.abspath(os.path.dirname(__file__))

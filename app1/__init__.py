@@ -1,5 +1,4 @@
 from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
 from .config.config import config
 from extension import db, migrate
 from view import views_bp
