@@ -1,4 +1,5 @@
 import datetime
+import pymysql
 
 
 # basedir = os.path.abspath(os.path.dirname(__file__))
@@ -17,8 +18,8 @@ class BaseConfig:
 class DevelopmentConfig(BaseConfig):
     DEBUG = True
     SQLALCHEMY_TRACK_MODIFICATIONS = False
-    # SQLALCHEMY_DATABASE_URI = 'sqlite:///test.db'
-    SQLALCHEMY_DATABASE_URI = "mysql+pymysql://root:1234@localhost:3306/data"
+    SQLALCHEMY_DATABASE_URI = 'sqlite:///test.db'
+    # SQLALCHEMY_DATABASE_URI = "mysql+pymysql://root:1234@localhost:3306/data"
  
 
 class TestingConfig(BaseConfig):
