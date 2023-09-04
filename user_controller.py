@@ -11,7 +11,9 @@ def list_users():
     return user_list
     
 
-def get_user_(email, priority, **kwargs):
+def get_user_(**kwargs):
+    email = kwargs.get('email', None)
+    priority = kwargs.get('priority', None)
     user_list = []
     if email and priority:
         users = User.query.filter_by(email = email, priority = priority).all()
@@ -19,6 +21,8 @@ def get_user_(email, priority, **kwargs):
         users = User.query.filter_by(email = email).all()
     elif priority:
         users = User.query.filter_by(priority = priority).all()
+    else:
+        users = db.session.execute(db.select(User).order_by(User.id)).scalars().all()
     for user in users:
         user_list.append({'user_email': user.email, 'user_password': user.password, 'user_priority': user.priority})
     return user_list
@@ -33,12 +37,14 @@ def create_user(email, password, priority, **kwargs):
         )
         db.session.add(user)
         db.session.commit()
-        return jsonify({'result' : "this is success!!"}), 200
+        return {'result' : "this is success!!"}, 200
     except:
-        return jsonify({'result' : "this is fail!!"}), 400
+        return {'result' : "this is fail!!"}, 400
 
 
-def update_user(email, password, priority, **kwargs): 
+def update_user(email, **kwargs): 
+    password = kwargs.get('password', None)
+    priority = kwargs.get('priority', None)
     user = User.query.filter_by(email=email).first()
     if user:
         if password and priority:
@@ -49,9 +55,9 @@ def update_user(email, password, priority, **kwargs):
         elif priority:
             user.priority = priority
         db.session.commit()
-        return jsonify({'result' : "this is success!!"}), 200
+        return {'result' : "this is success!!"}, 200
     else:
-        return jsonify({'result' : "Can't find this user!!"}), 400
+        return {'result' : "Can't find this user!!"}, 400
 
 
 def delete_user(email, **kwargs):
@@ -59,7 +65,7 @@ def delete_user(email, **kwargs):
     if user:
         db.session.delete(user)
         db.session.commit()
-        return jsonify({'result' : "this is success!!"}), 200
+        return {'result' : "this is success!!"}, 200
     else:
-        return jsonify({'result' : "Can't find this user!!"}), 400
+        return {'result' : "Can't find this user!!"}, 400
 

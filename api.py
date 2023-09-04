@@ -18,7 +18,7 @@ def user_detail():
         data = request.get_json()    
         email = data.get('email', None)
         priority = data.get('priority', None)
-        user_list = get_user_(email, priority)
+        user_list = get_user_(email=email, priority=priority)
         if len(user_list) > 0:
             return jsonify(user_list)
         else:
@@ -53,7 +53,7 @@ def user_update():
         password = data.get('password', None)
         priority = data.get('priority', None)
         if email and password or priority:
-            result = update_user(email, password, priority)
+            result = update_user(email, password=password, priority=priority)
             return result
         else:
             return jsonify({'result' : "please input complete!!"}), 200
