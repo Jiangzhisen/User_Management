@@ -14,14 +14,6 @@ class BaseConfig:
     SECRET_KEY = 'THIS IS MAX'
     PERMANENT_SESSION_LIFETIME = datetime.timedelta(days=14)
     TEMPLATES_AUTO_RELOAD = True
-    APISPEC_SPEC = APISpec(
-        title='User Management Project',
-        version='v1',
-        plugins=[MarshmallowPlugin()],
-        openapi_version='2.0.0'
-    )
-    APISPEC_SWAGGER_URL = '/swagger/'
-    APISPEC_SWAGGER_UI_URL = '/swagger-ui/'
 
 class DevelopmentConfig(BaseConfig):
     DEBUG = True
