@@ -62,10 +62,6 @@ class UserApi(MethodResource, Resource):
     @marshal_with(UserCreateResponseSchema)
     def post(self, **kwargs):
         try:
-            # data = request.get_json()
-            # email = data.get('email', None)
-            # password = data.get('password', None)
-            # priority = data.get('priority', None)
             email = kwargs.get('email', None)
             password = kwargs.get('password', None)
             priority = kwargs.get('priority', None)
@@ -82,10 +78,6 @@ class UserApi(MethodResource, Resource):
     @marshal_with(UserUpdateResponseSchema)
     def put(self, **kwargs):
         try:
-            # data = request.get_json()
-            # email = data.get('email', None)
-            # password = data.get('password', None)
-            # priority = data.get('priority', None)
             email = kwargs.get('email', None)
             password = kwargs.get('password', None)
             priority = kwargs.get('priority', None)
