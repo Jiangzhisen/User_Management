@@ -15,13 +15,18 @@ def create_app(config_name, **kwargs):
  
     app = Flask(__name__)
     api1 = Api(app)
+    spec = APISpec(
+        title='User Management Project',
+        version='v1',
+        info=dict(description="A user management API"),
+        plugins=[MarshmallowPlugin()],
+        openapi_version='2.0.0'
+    )
+    api_key_scheme = {"type": "apiKey", "in": "header", "name": "X-API-Key"}
+    spec.components.security_scheme("api_key", api_key_scheme)
+
     app.config.update({
-        'APISPEC_SPEC': APISpec(
-            title='User Management Project',
-            version='v1',
-            plugins=[MarshmallowPlugin()],
-            openapi_version='2.0.0'
-        ),
+        'APISPEC_SPEC': spec,
         'APISPEC_SWAGGER_URL': '/swagger/',  # URI to access API Doc JSON 
         'APISPEC_SWAGGER_UI_URL': '/swagger-ui/'  # URI to access UI of API Doc
     })
